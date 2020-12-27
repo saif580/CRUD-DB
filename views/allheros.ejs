@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Heros</title>
+</head>
+<body>
+    <h1 style="text-align: center; color:darkgrey;">All Superheroes</h1>
+    <ul>
+        <% for(let heros of superheros) { %>
+           <li style="color: darkslategrey;"><a href="/superheros/<%=heros._id%>"><%= heros.name %> </a></li> 
+        <% } %> 
+    </ul>
+    <a href="/superheros/new">Add A New Hero</a>
+</body>
+</html>

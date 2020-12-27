@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form</title>
+</head>
+<body>
+    <h1>Edit Superhero Details</h1>
+    <form action="/superheros/<%=heroInfo._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= heroInfo.name %>">
+        <br><br>
+        <label for="powerlevel">Powerlevel:</label>
+        <input type="number" name="powerlevel" value="<%= heroInfo.powerlevel %>">
+        <br><br>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="superhero" <%=heroInfo.category==='superhero'?'selected':''%>>superhero</option>
+            <option value="villian" <%=heroInfo.category==='villian'?'selected':''%>>villian</option>
+            <option value="human" <%=heroInfo.category==='human'?'selected':''%>>human</option>
+        </select>
+        <br><br>
+        <button>submit</button>
+    </form>
+    <br>
+    <a href="/superheros/<%=heroInfo._id%>">Back</a>
+</body>
+</html>

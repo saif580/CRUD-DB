@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Superhero</title>
+</head>
+<body>
+    <h1>Add New Superhero</h1>
+    <form action="/superheros" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <br><br>
+        <label for="powerlevel">Powerlevel:</label>
+        <input type="number" name="powerlevel">
+        <br><br>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="superhero" selected>superhero</option>
+            <option value="villian">villian</option>
+            <option value="human">human</option>
+        </select>
+        <br><br>
+        <button>submit</button>
+    </form>
+</body>
+</html>
